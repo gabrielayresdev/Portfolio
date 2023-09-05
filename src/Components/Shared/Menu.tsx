@@ -6,16 +6,16 @@ import logo from "../../assets/code-solid.svg";
 const Menu = () => {
   const [active, setActive] = React.useState(false);
 
-  const closeModal: React.MouseEventHandler = ({ target, currentTarget }) => {
+  const closeModal: React.MouseEventHandler<HTMLElement> = ({
+    target,
+    currentTarget,
+  }) => {
     if (currentTarget === target) setActive(false);
   };
 
   return (
     <header className={styles.menu}>
-      <h1>
-        <img src={logo} alt="" />
-        Gabriel Ayres
-      </h1>
+      <h1>{`<Gabriel Ayres />`}</h1>
       <nav className={active ? styles.active : ""}>
         <img
           src={burguer}
@@ -27,7 +27,13 @@ const Menu = () => {
         />
         <div className={styles.ulContainer} onClick={closeModal}>
           <ul>
-            {["sobre", "projetos", "certificados", "contato"].map((value) => (
+            {[
+              "sobre",
+              "tecnologias",
+              "projetos",
+              "certificados",
+              "contato",
+            ].map((value) => (
               <li key={value}>
                 <a onClick={() => setActive(false)}>{value}</a>
               </li>

@@ -1,0 +1,77 @@
+@import '/src/styles/variables'
+    
+.main 
+    width: 100%
+    height: calc( 100vh - 80px )
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .textContainer 
+        display: grid
+        grid-template-columns: auto 1fr
+        h2 
+            font-size: 10rem
+            font-weight: 700
+            
+            position: relative
+            line-height: 80%
+
+            &:nth-of-type(2)
+                grid-column: 1 / -1
+        p 
+            color: #000
+            max-width: 40ch
+            margin-left: 10px
+            margin-bottom: 10px
+            
+            font-size: 1.25rem
+            font-weight: 700
+            font-family: 'Poppins', sans-serif
+            
+
+            grid-column: 1 / -1
+
+            color: #666
+            
+        .about 
+            justify-self: flex-end
+
+        
+        .icons 
+            display: flex
+            align-items: flex-end
+            justify-content: flex-start
+            margin: 0 0 1rem 3rem
+            gap: 2rem
+            width: 100%
+            
+            a
+                cursor: pointer
+                transition: all .3s
+
+                &:hover
+                    transform: translateY(-10px)
+                img
+                    max-width: 50px
+
+    @media (max-width: $tabletBreakpoint) 
+        height: auto
+        margin: 10rem 0
+
+    @media (max-width: $mobileBreakpoint)
+        margin: 5rem 0
+        .textContainer
+            grid-template-columns: 1fr
+            justify-content: center
+            gap: .5rem
+            text-align: center
+            h2
+                font-size: 3rem
+
+            .icons 
+                grid-row: 5
+                margin: 0
+                justify-content: center
+            
