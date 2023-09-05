@@ -1,7 +1,7 @@
 import React from "react";
-import cv from "../../assets/file-lines-regular.svg";
-import github from "../../assets/github.svg";
-import linkedin from "../../assets/linkedin.svg";
+import cv from "../../../assets/file-lines-regular.svg";
+import github from "../../../assets/github.svg";
+import linkedin from "../../../assets/linkedin.svg";
 
 import styles from "./Main.module.sass";
 

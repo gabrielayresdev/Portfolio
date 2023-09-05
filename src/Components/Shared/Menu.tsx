@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Menu.module.sass";
 import burguer from "../../assets/bars-solid.svg";
-import logo from "../../assets/code-solid.svg";
 
 const Menu = () => {
   const [active, setActive] = React.useState(false);
@@ -27,17 +26,13 @@ const Menu = () => {
         />
         <div className={styles.ulContainer} onClick={closeModal}>
           <ul>
-            {[
-              "sobre",
-              "tecnologias",
-              "projetos",
-              "certificados",
-              "contato",
-            ].map((value) => (
-              <li key={value}>
-                <a onClick={() => setActive(false)}>{value}</a>
-              </li>
-            ))}
+            {["tecnologias", "projetos", "certificados", "contato"].map(
+              (value) => (
+                <li key={value}>
+                  <a onClick={() => setActive(false)}>{value}</a>
+                </li>
+              )
+            )}
           </ul>
         </div>
       </nav>
