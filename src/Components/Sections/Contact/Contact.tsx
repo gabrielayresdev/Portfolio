@@ -21,7 +21,7 @@ const Contact = () => {
   }
 
   return (
-    <div className={styles.form}>
+    <section id="contato" className={styles.form}>
       <div className={styles.leftWrapper}>
         <h2 className={styles.title}>Vamos trabalhar juntos!</h2>
         <span>
@@ -56,7 +56,7 @@ const Contact = () => {
           <Form.Button>Enviar</Form.Button>
         </Form.Root>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -29,7 +29,9 @@ const Menu = () => {
             {["tecnologias", "projetos", "certificados", "contato"].map(
               (value) => (
                 <li key={value}>
-                  <a onClick={() => setActive(false)}>{value}</a>
+                  <a href={`#${value}`} onClick={() => setActive(false)}>
+                    {value}
+                  </a>
                 </li>
               )
             )}
