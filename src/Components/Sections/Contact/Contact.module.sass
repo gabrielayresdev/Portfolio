@@ -1,0 +1,29 @@
+.form 
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 5rem
+    width: 50%
+    margin: 0 auto
+    margin-top: 5rem
+
+    .leftWrapper
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        .title 
+            font-size: 2rem
+
+            &::after 
+                content: ''
+                width: 100%
+                height: 2px
+                background: #ddd
+                display: block
+                margin-top: 10px
+        span
+            display: flex
+            align-items: center
+            gap: 1rem
+
+            img
+                max-width: 30px

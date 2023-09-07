@@ -1,0 +1,52 @@
+.inputWrapper
+    .input 
+        position: relative
+        border: none
+
+        display: flex
+        align-items: center
+        margin-bottom: .5rem
+
+        &.textarea 
+            align-items: flex-start
+
+        font-size: 1.25rem
+        font-weight: 500
+        color: #777
+
+        label
+            position: absolute
+            margin: 1rem
+
+
+        input, textarea
+            border: 1px solid #ddd
+            border-radius: .5rem
+            width: 100%
+            outline: none
+            padding: .5rem 1rem
+
+            font-size: inherit
+            font-weight: inherit
+            color: inherit
+            letter-spacing: +1px
+
+            background: #fff
+            
+        textarea 
+            resize: vertical
+            height: 10rem
+
+        input:focus ~ label, textarea:focus ~ label, input:not(:placeholder-shown) ~ label, textarea:not(:placeholder-shown) ~ label 
+            display: none
+
+    .error
+        display: inline
+
+        font-size: .875rem
+        color: #fc5a5a
+
+        padding: .5rem
+
+    
+    
