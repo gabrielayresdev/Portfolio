@@ -1,8 +1,9 @@
+@import '/src/Styles/variables'
+    
 .form 
     display: grid
     grid-template-columns: 1fr 1fr
     gap: 5rem
-    width: 50%
     margin: 0 auto
     margin-top: 5rem
 
@@ -27,3 +28,7 @@
 
             img
                 max-width: 30px
+
+    @media (max-width: $mobileBreakpoint)
+        grid-template-columns: 1fr
+        gap: 2rem

@@ -16,7 +16,7 @@ import Certificado from "./Certificado";
 
 const Certificados = () => {
   return (
-    <div className={styles.certificados} id="certificados">
+    <div className={styles.certificados + " container"} id="certificados">
       <h2 className={styles.title}>Diplomas e certificados</h2>
       <Swiper
         effect={"cards"}

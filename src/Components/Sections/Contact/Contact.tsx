@@ -21,7 +21,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contato" className={styles.form}>
+    <section id="contato" className={styles.form + " container"}>
       <div className={styles.leftWrapper}>
         <h2 className={styles.title}>Vamos trabalhar juntos!</h2>
         <span>

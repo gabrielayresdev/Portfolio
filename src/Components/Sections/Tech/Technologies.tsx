@@ -12,7 +12,7 @@ import tailwind from "../../../assets/tech/tailwind-css-icon.svg";
 
 const Technologies = () => {
   return (
-    <section id="tecnologias" className={styles.technologies}>
+    <section id="tecnologias" className={styles.technologies + " container"}>
       <h2>Tecnologias</h2>
       <div className={styles.tech}>
         <img src={html} alt="" />

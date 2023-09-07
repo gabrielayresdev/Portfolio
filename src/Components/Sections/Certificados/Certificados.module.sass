@@ -1,5 +1,6 @@
+@import '/src/Styles/variables'
+    
 .certificados 
-    width: 50%
     margin: 5rem auto 0
 
     .title 
@@ -17,3 +18,7 @@
     .carousel
         width: 60%
         margin: 0 auto
+
+    @media (max-width: $mobileBreakpoint)
+        .carousel 
+            width: 90%
