@@ -12,6 +12,12 @@ const Menu = () => {
     if (currentTarget === target) setActive(false);
   };
 
+  React.useEffect(() => {
+    if (active) {
+      document.body.style.overflow = "hidden";
+    } else document.body.style.overflow = "auto";
+  }, [active]);
+
   return (
     <header className={styles.menu}>
       <h1>{`<Gabriel Ayres />`}</h1>
