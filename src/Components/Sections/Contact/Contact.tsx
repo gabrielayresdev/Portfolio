@@ -10,11 +10,22 @@ const Contact = () => {
   const name = useForm(false);
   const message = useForm(false);
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState(false);
+
+  function handleSubmit(
+    event: React.FormEvent<HTMLFormElement>,
+    sendEmail: VoidFunction
+  ) {
     event.preventDefault();
 
     if (email.validate() && name.validate() && message.validate()) {
-      console.log("Enviou");
+      sendEmail();
+      if (!loading && !error) {
+        email.setValue("");
+        name.setValue("");
+        message.setValue("");
+      }
     } else {
       console.log("Não enviou");
     }
@@ -34,7 +45,11 @@ const Contact = () => {
         </span>
       </div>
       <div className={styles.rightWrapper}>
-        <Form.Root onSubmit={handleSubmit}>
+        <Form.Root
+          onSubmit={handleSubmit}
+          setLoading={setLoading}
+          setError={setError}
+        >
           <Form.Input
             label="E-mail"
             value={email.value}
@@ -56,7 +71,7 @@ const Contact = () => {
             name="message"
           />
 
-          <Form.Button>Enviar</Form.Button>
+          <Form.Button disabled={loading ? true : false}>Enviar</Form.Button>
         </Form.Root>
       </div>
     </section>

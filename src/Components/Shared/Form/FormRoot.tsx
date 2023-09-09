@@ -4,16 +4,27 @@ import emailjs from "@emailjs/browser";
 
 interface FormRootProps {
   children: React.ReactNode;
-  onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
+  onSubmit: (
+    event: React.FormEvent<HTMLFormElement>,
+    sendEmail: VoidFunction
+  ) => void;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  setError: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const FormRoot = ({ children, onSubmit }: FormRootProps) => {
+const FormRoot = ({
+  children,
+  onSubmit,
+  setLoading,
+  setError,
+}: FormRootProps) => {
   const formRef = React.useRef<HTMLFormElement | null>(null);
 
-  const sendEmail = (e: React.FormEvent) => {
-    e.preventDefault();
+  const sendEmail = () => {
+    if (formRef.current) {
+      setLoading(true);
+      setError(false);
 
-    if (formRef.current)
       emailjs
         .sendForm(
           "service_nypjud5",
@@ -26,13 +37,21 @@ const FormRoot = ({ children, onSubmit }: FormRootProps) => {
             console.log(result.text);
           },
           (error) => {
-            console.log(error.text);
+            setError(error);
           }
-        );
+        )
+        .finally(() => setLoading(false));
+    }
   };
 
   return (
-    <form className={styles.form} onSubmit={sendEmail} ref={formRef}>
+    <form
+      className={styles.form}
+      onSubmit={(event) => {
+        onSubmit(event, sendEmail);
+      }}
+      ref={formRef}
+    >
       {children}
     </form>
   );
