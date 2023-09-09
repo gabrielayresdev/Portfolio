@@ -41,16 +41,19 @@ const Contact = () => {
             error={email.error}
             onBlur={email.onBlur}
             onChange={email.onChange}
+            name="user_email"
           />
           <Form.Input
             label="Nome"
             value={name.value}
             onChange={name.onChange}
+            name="user_name"
           />
           <Form.Textarea
             label="Mensagem"
             value={message.value}
             onChange={message.onChange}
+            name="message"
           />
 
           <Form.Button>Enviar</Form.Button>
