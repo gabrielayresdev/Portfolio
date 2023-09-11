@@ -8,6 +8,7 @@ const Projects = () => {
 
   return (
     <section className={styles.projects + " container"}>
+      <h2 className={styles.title}>Projetos</h2>
       {projects &&
         projects.map((project) => {
           return <Project key={project.id} project={project} />;
