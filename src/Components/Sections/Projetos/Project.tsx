@@ -20,28 +20,28 @@ const Project = ({ project }: { project: IProject }) => {
             <p data-tech={tech}>{tech}</p>
           ))}
         </div>
-        <div className={styles.buttonContainer}>
-          {project.github && (
-            <a
-              target="_blank"
-              className={`${styles.button} ${styles.code}`}
-              href={project.github}
-            >
-              <img className={styles.buttonIcon} src={htmlIcon} alt="" />
-              <span>Código</span>
-            </a>
-          )}
-          {project.deploy && (
-            <a
-              target="_blank"
-              className={`${styles.button} ${styles.site}`}
-              href={project.deploy}
-            >
-              <img className={styles.buttonIcon} src={navIcon} alt="" />
-              <span>Site</span>
-            </a>
-          )}
-        </div>
+      </div>
+      <div className={styles.buttonContainer}>
+        {project.github && (
+          <a
+            target="_blank"
+            className={`${styles.button} ${styles.code}`}
+            href={project.github}
+          >
+            <img className={styles.buttonIcon} src={htmlIcon} alt="" />
+            <span>Código</span>
+          </a>
+        )}
+        {project.deploy && (
+          <a
+            target="_blank"
+            className={`${styles.button} ${styles.site}`}
+            href={project.deploy}
+          >
+            <img className={styles.buttonIcon} src={navIcon} alt="" />
+            <span>Site</span>
+          </a>
+        )}
       </div>
     </div>
   );
