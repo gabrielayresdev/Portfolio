@@ -1,11 +1,20 @@
 import React from "react";
 
+type technologies =
+  | "HTML"
+  | "CSS"
+  | "JavaScript"
+  | "Tailwind css"
+  | "Sass"
+  | "Scss"
+  | "React";
+
 export interface IProject {
   id: number;
   github?: string;
   deploy?: string;
   name: string;
-  technologies: string[];
+  technologies: technologies[];
   description: string;
   image: string;
   images: string[];
@@ -33,7 +42,7 @@ const ProjectContextProvider = ({ children }: React.PropsWithChildren) => {
       images: [
         "https://github.com/gabrielayresdev/PodCastfy/blob/main/src/assets/readme_images/desktop.png?raw=true",
       ],
-      technologies: ["react", "scss", "tailwind css"],
+      technologies: ["React", "Scss", "Tailwind css"],
     },
   ];
 

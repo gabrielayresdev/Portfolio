@@ -16,10 +16,9 @@ const Project = ({ project }: { project: IProject }) => {
         <h2 className={styles.title}>{project.name}</h2>
         <p className={styles.description}>{project.description}</p>
         <div className={styles.technologies}>
-          <p data-tech="react">React</p>
-          <p data-tech="javascript">Javascript</p>
-          <p data-tech="scss">SCSS</p>
-          <p data-tech="tailwind">Tailwind css</p>
+          {project.technologies.map((tech) => (
+            <p data-tech={tech}>{tech}</p>
+          ))}
         </div>
         <div className={styles.buttonContainer}>
           {project.github && (
