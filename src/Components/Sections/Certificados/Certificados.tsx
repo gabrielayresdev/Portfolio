@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Certificados.module.sass";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,7 +15,7 @@ import Certificado from "./Certificado";
 
 const Certificados = () => {
   return (
-    <div className={styles.certificados + " container"} id="certificados">
+    <section className={styles.certificados + " container"} id="certificados">
       <h2 className={styles.title}>Diplomas e certificados</h2>
       <Swiper
         effect={"cards"}
@@ -34,7 +33,7 @@ const Certificados = () => {
           <Certificado href="" src={c3} alt="Curso de React completo" />
         </SwiperSlide>
       </Swiper>
-    </div>
+    </section>
   );
 };
 

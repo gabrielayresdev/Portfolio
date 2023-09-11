@@ -32,7 +32,7 @@ const Menu = () => {
         />
         <div className={styles.ulContainer} onClick={closeModal}>
           <ul>
-            {["tecnologias", "projetos", "certificados", "contato"].map(
+            {["projetos", "tecnologias", "certificados", "contato"].map(
               (value) => (
                 <li key={value}>
                   <a href={`#${value}`} onClick={() => setActive(false)}>

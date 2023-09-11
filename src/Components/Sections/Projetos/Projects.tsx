@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = useContext();
 
   return (
-    <section className={styles.projects + " container"}>
+    <section id="projetos" className={styles.projects + " container"}>
       <h2 className={styles.title}>Projetos</h2>
       {projects &&
         projects.map((project) => {
