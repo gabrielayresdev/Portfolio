@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./Menu.module.sass";
 import burguer from "../../assets/bars-solid.svg";
 
+import { Link } from "react-scroll";
+
 const Menu = () => {
   const [active, setActive] = React.useState(false);
 
@@ -35,9 +37,16 @@ const Menu = () => {
             {["projetos", "tecnologias", "certificados", "contato"].map(
               (value) => (
                 <li key={value}>
-                  <a href={`#${value}`} onClick={() => setActive(false)}>
+                  <Link
+                    to={value}
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    onClick={() => setActive(false)}
+                  >
                     {value}
-                  </a>
+                  </Link>
                 </li>
               )
             )}
