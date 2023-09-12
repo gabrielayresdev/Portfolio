@@ -17,11 +17,11 @@ const Menu = () => {
   React.useEffect(() => {
     if (active) {
       document.body.style.overflow = "hidden";
-    } else document.body.style.overflow = "auto";
+    } else document.body.removeAttribute("style");
   }, [active]);
 
   return (
-    <header className={styles.menu}>
+    <header className={styles.menu + " sticky"}>
       <h1>{`<Gabriel Ayres />`}</h1>
       <nav className={active ? styles.active : ""}>
         <img

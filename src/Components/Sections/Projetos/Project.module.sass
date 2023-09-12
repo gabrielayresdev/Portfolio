@@ -1,3 +1,5 @@
+@import '/src/Styles/variables'
+    
 .project
 
     border: 1px solid #ddd
@@ -94,6 +96,7 @@
 
             transition: all .4s
 
+
             &.code
                 background: #8257E5
                 color: #00E768
@@ -154,4 +157,15 @@
                     transition-delay: .4s
                     transform: translate(0)
             
+            @media (max-width: $tabletBreakpoint)
+                width: 120px
+                border-radius: .5rem
+                span 
+                    visibility: visible
+                    opacity: 1
+                    transform: translate(0)
+                
+                .buttonIcon 
+                    position: static
+                    transform: translate(0)
     
