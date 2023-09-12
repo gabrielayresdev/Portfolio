@@ -24,13 +24,25 @@ const Certificados = () => {
         className={`mySwiper ${styles.carousel}`}
       >
         <SwiperSlide>
-          <Certificado href="" src={c1} alt="Curso de HTML e CSS" />
+          <Certificado
+            href="https://cursos.alura.com.br/degree/certificate/87eed6c0-acd1-43dd-a60c-fe872fa49900?lang=pt_BR"
+            src={c1}
+            alt="Curso de HTML e CSS"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <Certificado href="" src={c2} alt="Curso de JavaScript" />
+          <Certificado
+            href="https://www.origamid.com/certificate/d643d905"
+            src={c2}
+            alt="Curso de JavaScript"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <Certificado href="" src={c3} alt="Curso de React completo" />
+          <Certificado
+            href="https://www.origamid.com/certificate/764cb070"
+            src={c3}
+            alt="Curso de React completo"
+          />
         </SwiperSlide>
       </Swiper>
     </section>

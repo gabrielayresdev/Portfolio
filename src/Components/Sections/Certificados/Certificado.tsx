@@ -8,7 +8,11 @@ interface ICertificado {
 
 const Certificado = ({ href, src, alt }: ICertificado) => {
   return (
-    <a href={href} target="_blank">
+    <a
+      href={href}
+      target="_blank"
+      style={href.length === 0 || href === "#" ? { pointerEvents: "none" } : {}}
+    >
       <img src={src} alt={alt} />
     </a>
   );
