@@ -32,7 +32,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contato" className={styles.form + " container"}>
+    <section id="contato" className={styles.form}>
       <div className={styles.leftWrapper}>
         <h2 className={styles.title}>Vamos trabalhar juntos!</h2>
         <span>
@@ -44,6 +44,7 @@ const Contact = () => {
           +55 021 967213085
         </span>
       </div>
+      <span className={styles.detail}></span>
       <div className={styles.rightWrapper}>
         <Form.Root
           onSubmit={handleSubmit}
