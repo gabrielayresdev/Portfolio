@@ -2,15 +2,14 @@
     
 .project
 
-    border: 1px solid #ddd
+    border: 1px solid $c7
     border-radius: 8px
     overflow: hidden
     display: flex
     flex-direction: column
-    background: #fbfbfb
-
+    background: $c6
     .imageContainer 
-        border-bottom: 1px solid #ddd
+        border-bottom: 1px solid $c7
         img 
             width: 100%
             aspect-ratio: 16/9
@@ -31,7 +30,7 @@
         .description 
             font-size: .95rem
             font-weight: 500
-            color: #777
+            color: $c3
 
         .technologies 
             display: flex
@@ -51,22 +50,22 @@
                 line-height: 1
             [data-tech='HTML'] 
                 background: #FF4C1E
-                color: #fff
+                color: $c1
             [data-tech='CSS']
                 background: #2299F8
-                color: #fff
+                color: $c1
             [data-tech='JavaScript']
                 background: #FFDF00
-                color: #000
+                color: $c2
             [data-tech='Scss']
                 background: #CE679A
-                color: #fff
+                color: $c1
             [data-tech='React']
                 background: #61DBFB
-                color: #fff
+                color: $c1
             [data-tech='Tailwind css']
                 background: #06b6d4
-                color: #fff
+                color: $c1
 
     .buttonContainer
         display: flex
@@ -98,12 +97,12 @@
 
 
             &.code
-                background: #8257E5
-                color: #00E768
+                background: $c8
+                color: $c9
 
             &.site
-                background: #00E768
-                color: #8257E5
+                background: $c9
+                color: $c8
             
             .buttonIcon
                 width: 20px

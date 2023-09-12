@@ -8,7 +8,7 @@
     justify-content: space-between
     align-items: center
     padding: 1.5rem 4rem
-    background: #fff
+    background: $c1
     box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.1)
     z-index: 10
 
@@ -37,9 +37,14 @@
                     padding: .5rem
                     cursor: pointer
                     font-weight: 500
-                    color: #bbb
+                    color: $c10
                     font-family: 'Rubik', sans-serif
                     text-transform: capitalize
+                    transition: .3s
+
+                &:hover 
+                    a 
+                        color: $c2
 
     img 
         max-width: 30px
@@ -63,7 +68,7 @@
 
                 transition: all .3s
                 ul
-                    background: #fff
+                    background: $c1
                     padding: 2rem 0
 
                     flex-direction: column
@@ -71,7 +76,7 @@
                     li 
                         a
                             font-size: 1.125rem
-                            color: #999
+                            color: $c3
 
             &.active 
                 .ulContainer
