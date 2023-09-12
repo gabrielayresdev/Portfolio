@@ -17,7 +17,9 @@ const Project = ({ project }: { project: IProject }) => {
         <p className={styles.description}>{project.description}</p>
         <div className={styles.technologies}>
           {project.technologies.map((tech) => (
-            <p data-tech={tech}>{tech}</p>
+            <p data-tech={tech} key={tech}>
+              {tech}
+            </p>
           ))}
         </div>
       </div>
