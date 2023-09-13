@@ -34,7 +34,7 @@ As principais funcionalidades são:
 
 ### Tablet
 
-![Layout tablet](/src/assets/readme_images/tablet1.png)
+![Layout tablet](/src/assets/readme_images/Tablet1.png)
 ![Layout tablet](/src/assets/readme_images/tablet2.png)
 
 ### Mobile
